@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: "Lato";
+    background-color:#0E0F23 ;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 12%;
+    padding: 0 7rem;
+    background-color: #0E0F23;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.logo-div {
+    font-weight: 650;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0090e4;
+}
+
+.logo-div P {
+    color: #3BB3FF;
+}
+
+.navbar .logo-div img {
+    width: 5rem;
+}
+
+.menu-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu-div li {
+    list-style-type: none;
+    font-weight: 500;
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.menu-div li:hover {
+    background-image: linear-gradient(125deg, #0090e4, #70cbff);
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    transition: 0.6s;
+}
+
+.social-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1rem;
+    gap: 3rem;
+    color: #ffffff;
+}
+
+.social-div a {
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+}
+
+.social-div a:hover {
+    background-image: linear-gradient(125deg, #0090e4, #70cbff);
+    color: #ffffff;
+    border-radius: 2rem;
+    transition: 0.6s;
+}
+
+.social-div .instagram:hover {
+    background-image: linear-gradient(125deg, #BB01AD, #ee004f);
+}
+
+.button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #ffffff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+@media screen and (max-width: 1167px) {
+
+    .navbar {
+        padding: 0 3rem;
+    }
+
+    .logo-div {
+        font-size: 1.4rem;
+    }
+
+    .navbar .logo-div img {
+        width: 4.5rem;
+    }
+
+    .menu-div {
+        gap: 0rem;
+    }
+
+    .social-div {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .social-div {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 0 3rem;
+    }
+
+    .menu-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 12%;
+        left: 0;
+        width: 100%;
+        height: 88%;
+        background-color: #0E0F23;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+
+    .menu-div.show {
+        transform: translateX(0%);
+    }
+
+    .menu-div li {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        border-bottom: 1px solid #3BB3FF;
+    }
+
+    .checkbtn {
+        display: block;
+        margin: auto;
+    }
+
+    #check:checked~.menu-div {
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .navbar {
+        padding: 0 1rem;
+    }
+}
+
+section{
+    background-size: auto;
+    margin-top: 80px;
+    height: calc(100vh - 12%);
+  }
+  .split {
+    height: calc(100vh - 12%);
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    padding-top: 20px;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+  .center {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 30px;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .centered img {
+    width: 500px;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .dm {
+    padding: 0 2px;
+    margin-top: 20px;
+  }
+hr {
+    color: white;
+}
